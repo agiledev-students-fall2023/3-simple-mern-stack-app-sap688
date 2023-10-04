@@ -1,5 +1,7 @@
+import React from 'react';
 import { Link } from 'react-router-dom'
 import './Home.css'
+
 
 /**
  * A React component that represents the Home page of the app.

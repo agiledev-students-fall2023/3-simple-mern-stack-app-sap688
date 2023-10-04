@@ -1,3 +1,4 @@
+import React from 'react';
 import './Header.css'
 import logo from './logo.svg'
 import { Link } from 'react-router-dom'
@@ -20,6 +21,9 @@ const Header = props => {
           </li>
           <li className="nav-item">
             <Link to="/messages">Messages</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about">About Us</Link>
           </li>
         </ul>
       </nav>

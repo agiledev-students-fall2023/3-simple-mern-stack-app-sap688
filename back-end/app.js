@@ -40,6 +40,31 @@ app.get('/messages', async (req, res) => {
   }
 })
 
+const aboutInfo = {
+  'content' : 'Hi! My name is Sophie Ana Paris! I am a senior in Gallatin, studying assistive technology and accessible design. I am passionate about using creativity and innovation to make the world more accessible. I am originally from Boston, MA, and I have 2 younger siblings.', 
+  'image' : 'https://i.postimg.cc/wTBMMCsV/sap688.png'
+}
+
+// ABOUT PART 
+app.get('/about', async (req, res) => {
+  //about = endpoint
+  // ABOUT 
+  console.log('REQUEST RECIEVEED');
+  res.json(aboutInfo);
+  console.log('REQUEST sent:', aboutInfo.content);
+  console.log('REQUEST sent:', aboutInfo.data);
+  console.log('REQUEST sent:', aboutInfo);
+
+
+
+});
+
+
+
+console.log('CHECKING MY DATA : ', aboutInfo.content)
+
+
+
 // a route to handle fetching a single message by its id
 app.get('/messages/:messageId', async (req, res) => {
   // load all messages from database
@@ -80,3 +105,5 @@ app.post('/messages/save', async (req, res) => {
 
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
+
+
